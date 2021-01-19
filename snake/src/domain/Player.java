@@ -59,4 +59,8 @@ public class Player {
         body.remove(body.size()-1);
         return tail;
     }
+
+    public int getScore() {
+        return score;
+    }
 }

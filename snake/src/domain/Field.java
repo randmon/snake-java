@@ -10,6 +10,7 @@ public class Field {
     private final int[][] field;
     private final Player player;
     private int emptyCount;
+    private String text;
 
     public Field(Handler handler) {
         this.handler = handler;
@@ -21,6 +22,7 @@ public class Field {
         player = new Player(tileAmount/2, tileAmount/2);
         spawnPlayer();
         spawnApple();
+        text = "Score: 0";
     }
 
     public void clearField() {
@@ -55,9 +57,12 @@ public class Field {
             if (emptyCount > 0) {
                 getInput();
                 if (player.getDirection() >= 0) move();
+                text = "Score: " + player.getScore();
             } else {
                 System.out.println("YOU WIN!!!");
             }
+        } else {
+            text = "Game over! \r Score: " + player.getScore();
         }
     }
 
@@ -122,6 +127,9 @@ public class Field {
                 }
             }
         }
+
+        g.setColor(Color.white);
+        g.drawString(text, 20, tileAmount * height - 20);
     }
 
     public Player getPlayer() {
