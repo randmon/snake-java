@@ -6,7 +6,7 @@ import java.util.List;
 public class Player {
     private boolean alive = true;
     private int direction, score;
-    private List<int[]> body = new ArrayList<>();
+    private final List<int[]> body = new ArrayList<>();
 
     public Player(int x, int y) {
         direction = -1;

@@ -90,7 +90,7 @@ public class Field {
         player.move(newCoord);
         field[newCoord[1]][newCoord[0]] = newBlock[0];
 
-        if (newBlock[1] == 1) { //apple gevonden
+        if (newBlock[1] == 1) { //apple found
             spawnApple();
         }
     }

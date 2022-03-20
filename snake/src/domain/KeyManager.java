@@ -34,6 +34,5 @@ public class KeyManager implements KeyListener {
         if(left) keys[KeyEvent.VK_LEFT] = false;
         right = keys[KeyEvent.VK_RIGHT];
         if(right) keys[KeyEvent.VK_RIGHT] = false;
-
     }
 }
